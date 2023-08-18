@@ -1,0 +1,21 @@
+# Binaries (object files) produced by a compiler
+*.so
+*.o
+
+# Python/Jupyter uses these cache directories
+__pycache__
+.ipynb_checkpoints
+
+# Produced when measuring code coverage
+.coverage
+
+# These files are produced during the Python build process
+build/
+.eggs
+dist/
+
+# MacOS automatically creates these files
+.DS_Store
+
+# VSCode may create a config file with this name
+**.vscode
