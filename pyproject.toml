@@ -1,0 +1,30 @@
+[project]
+name = "mockup"
+authors = [
+  { name="Jakob Nybo Nissen", email="jakobnybonissen@gmail.com" },
+]
+description = "A small example package"
+# This means: Load the version from the package itself.
+# See the section below: [tools.setuptools.dynamic]
+dynamic = ["version"]
+readme = "README.md"
+# We use features for Python 3.11, so we test it here.
+requires-python = ">=3.11"
+# These are keywords
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/RasmussenLab/python_package"
+"Bug Tracker" = "https://github.com/RasmussenLab/python_package/issues"
+
+
+[tool.setuptools.dynamic]
+version = {attr = "mockup.__version__"}
+
+# Configure the Ruff linter: Ignore error number 501
+[tool.ruff]
+ignore = ["E501"]
