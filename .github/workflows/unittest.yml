@@ -38,4 +38,4 @@ jobs:
         # stop the build if there are Python syntax errors or undefined names
         ruff check .
     - name: Run tests
-      run: python -m pytest test
+      run: python -m pytest tests
