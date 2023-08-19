@@ -13,6 +13,7 @@ __pycache__
 build/
 .eggs
 dist/
+**.egg-info
 
 # MacOS automatically creates these files
 .DS_Store
