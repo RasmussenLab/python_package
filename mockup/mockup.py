@@ -77,6 +77,7 @@ class Circle:
     >>> c2 = Circle.from_circumference(100); round(c2.radius, 3)
     15.916
     """
+
     PI = 3.14159
 
     __slots__ = ["radius"]
