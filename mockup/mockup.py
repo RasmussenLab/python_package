@@ -36,7 +36,7 @@ def reciprocal(number: Union[int, float]) -> Optional[float]:
     return 1 / number
 
 
-# Abstract types
+# Abstract types (also known as ABCs, Abstract Base Classes) are defined by their behaviour.
 def flatten_ints(its: Iterable[Iterable[int]]) -> Iterable[int]:
     """
     Given an iterable of iterables of ints, return an iterable of all the ints
@@ -58,7 +58,7 @@ def flatten_generic(its: Iterable[Iterable[T]]) -> Iterable[T]:
     Given an iterable of iterables, return an iterable of all the inner
     elements in the inner iterables.
 
-    >>> list(flatten_ints(["hi", (4, 2.54)]))
+    >>> list(flatten_generic(["hi", (4, 2.54)]))
     ['h', 'i', 4, 2.54]
     """
     for it in its:
