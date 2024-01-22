@@ -16,9 +16,9 @@ from importlib import metadata
 
 # -- Project information -----------------------------------------------------
 
-project = 'mockup'
-copyright = '2024, Jakob Nybo Nissen, Henry Webel'
-author = 'Jakob Nybo Nissen, Henry Webel'
+project = "mockup"
+copyright = "2024, Jakob Nybo Nissen, Henry Webel"
+author = "Jakob Nybo Nissen, Henry Webel"
 PACKAGE_VERSION = metadata.version("mockup")
 version = PACKAGE_VERSION
 release = PACKAGE_VERSION
@@ -30,12 +30,12 @@ release = PACKAGE_VERSION
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autodoc',
-    'sphinx.ext.autodoc.typehints',
-    'sphinx.ext.viewcode',
-    # 'myst_nb',
-    'sphinx.ext.napoleon',
-    # 'sphinx_new_tab_link',
+    "sphinx.ext.autodoc",
+    "sphinx.ext.autodoc.typehints",
+    "sphinx.ext.viewcode",
+    "myst_nb",
+    "sphinx.ext.napoleon",
+    "sphinx_new_tab_link",
 ]
 
 #  https://myst-nb.readthedocs.io/en/latest/computation/execute.html
@@ -46,7 +46,8 @@ myst_enable_extensions = ["dollarmath", "amsmath"]
 # Plolty support through require javascript library
 # https://myst-nb.readthedocs.io/en/latest/render/interactive.html#plotly
 html_js_files = [
-    "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"]
+    "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"
+]
 
 # https://myst-nb.readthedocs.io/en/latest/configuration.html
 # Execution
@@ -55,12 +56,12 @@ nb_execution_raise_on_error = True
 nb_merge_streams = True
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ["_templates"]
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -111,17 +112,20 @@ if os.environ.get("READTHEDOCS") == "True":
 
     def run_apidoc(_):
         from sphinx.ext import apidoc
-        apidoc.main([
-            "--force",
-            "--implicit-namespaces",
-            "--module-first",
-            "--separate",
-            "-o",
-            str(PROJECT_ROOT / "docs" / "reference"),
-            str(PACKAGE_ROOT),
-            str(PACKAGE_ROOT / "*.c"),
-            str(PACKAGE_ROOT / "*.so"),
-        ])
+
+        apidoc.main(
+            [
+                "--force",
+                "--implicit-namespaces",
+                "--module-first",
+                "--separate",
+                "-o",
+                str(PROJECT_ROOT / "docs" / "reference"),
+                str(PACKAGE_ROOT),
+                str(PACKAGE_ROOT / "*.c"),
+                str(PACKAGE_ROOT / "*.so"),
+            ]
+        )
 
     def setup(app):
-        app.connect('builder-inited', run_apidoc)
+        app.connect("builder-inited", run_apidoc)
