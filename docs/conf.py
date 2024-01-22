@@ -1,30 +1,97 @@
 # Configuration file for the Sphinx documentation builder.
 #
-# For the full list of built-in configuration values, see the documentation:
+# This file only contains a selection of the most common options. For a full
+# list see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
+# -- Path setup --------------------------------------------------------------
+
+# If extensions (or modules to document with autodoc) are in another directory,
+# add these directories to sys.path here. If the directory is relative to the
+# documentation root, use os.path.abspath to make it absolute, like shown here.
+#
+import os
+from importlib import metadata
+
+
 # -- Project information -----------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'mockup'
-copyright = '2023, Jakob Nybo Nissen'
-author = 'Jakob Nybo Nissen'
+copyright = '2024, Jakob Nybo Nissen, Henry Webel'
+author = 'Jakob Nybo Nissen, Henry Webel'
+PACKAGE_VERSION = metadata.version("mockup")
+version = PACKAGE_VERSION
+release = PACKAGE_VERSION
+
 
 # -- General configuration ---------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
+# Add any Sphinx extension module names here, as strings. They can be
+# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
+# ones.
 extensions = [
-"sphinx.ext.autodoc",
-"sphinx.ext.autodoc.typehints",
+    'sphinx.ext.autodoc',
+    'sphinx.ext.autodoc.typehints',
+    'sphinx.ext.viewcode',
+    # 'myst_nb',
+    'sphinx.ext.napoleon',
+    # 'sphinx_new_tab_link',
 ]
 
+#  https://myst-nb.readthedocs.io/en/latest/computation/execute.html
+nb_execution_mode = "auto"
+
+myst_enable_extensions = ["dollarmath", "amsmath"]
+
+# Plolty support through require javascript library
+# https://myst-nb.readthedocs.io/en/latest/render/interactive.html#plotly
+html_js_files = [
+    "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"]
+
+# https://myst-nb.readthedocs.io/en/latest/configuration.html
+# Execution
+nb_execution_raise_on_error = True
+# Rendering
+nb_merge_streams = True
+
+# Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
+
+# List of patterns, relative to source directory, that match files and
+# directories to ignore when looking for source files.
+# This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 
-
 # -- Options for HTML output -------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'alabaster'
-html_static_path = ['_static']
+# The theme to use for HTML and HTML Help pages.  See the documentation for
+# a list of builtin themes.
+# See:
+# https://github.com/executablebooks/MyST-NB/blob/master/docs/conf.py
+# html_title = ""
+html_theme = "sphinx_book_theme"
+# html_logo = "_static/logo-wide.svg"
+# html_favicon = "_static/logo-square.svg"
+html_theme_options = {
+    "github_url": "https://github.com/RasmussenLab/python_package",
+    "repository_url": "https://github.com/RasmussenLab/python_package",
+    "repository_branch": "main",
+    "home_page_in_toc": True,
+    "path_to_docs": "docs",
+    "show_navbar_depth": 1,
+    "use_edit_page_button": True,
+    "use_repository_button": True,
+    "use_download_button": True,
+    "launch_buttons": {
+        "colab_url": "https://colab.research.google.com"
+        #     "binderhub_url": "https://mybinder.org",
+        #     "notebook_interface": "jupyterlab",
+    },
+    "navigation_with_keys": False,
+}
+
+# Add any paths that contain custom static files (such as style sheets) here,
+# relative to this directory. They are copied after the builtin static files,
+# so a file named "default.css" will overwrite the builtin "default.css".
+# html_static_path = ["_static"]
