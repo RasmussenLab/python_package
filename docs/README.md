@@ -8,8 +8,11 @@ In order to build the docs you need to
 
 The documentation is build using readthedocs automatically.
 
+Install the docs dependencies of the package (as speciefied in toml):
+
 ```bash
-pip install sphinx_book_theme
+# in main folder
+pip install .[docs]
 ```
 
 ## Build docs using Sphinx command line tools

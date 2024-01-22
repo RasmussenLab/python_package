@@ -24,6 +24,15 @@ classifiers = [
 [tool.setuptools.dynamic]
 version = {attr = "mockup.__version__"}
 
+[project.optional-dependencies]
+docs = [
+  "sphinx",
+  "sphinx-book-theme",
+  "myst-nb",
+  "ipywidgets",
+  "sphinx-new-tab-link",
+]
+
 # Configure the Ruff linter: Ignore error number 501
 [tool.ruff]
 ignore = ["E501"]
