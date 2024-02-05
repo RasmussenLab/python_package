@@ -6,14 +6,29 @@
 The mockup package
 ==================================
 
+Mockup is a Python package with some simple example code.
+To get started, explore the `mockup.Circle` class.
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Tutorial
+   
+   tutorial/tutorial
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
    reference/modules
 
-Mockup is a Python package with some simple example code.
-To get started, explore the `mockup.Circle`_ class.
+.. toctree::
+   :hidden:
+   :caption: Technical notes
+
+   README.md
+
+
 
 Indices and tables
 ==================
