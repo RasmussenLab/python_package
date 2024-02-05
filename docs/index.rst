@@ -7,7 +7,8 @@ The mockup package
 ==================================
 
 Mockup is a Python package with some simple example code.
-To get started, explore the `mockup.Circle` class.
+To get started, explore the :class:`mockup.Circle` class.
+
 
 
 .. toctree::
