@@ -19,7 +19,7 @@ from importlib import metadata
 project = "mockup"
 copyright = "2024, Jakob Nybo Nissen, Henry Webel"
 author = "Jakob Nybo Nissen, Henry Webel"
-PACKAGE_VERSION = metadata.version("mockup")
+PACKAGE_VERSION = metadata.version("rasmussenlab-mockup")
 version = PACKAGE_VERSION
 release = PACKAGE_VERSION
 
