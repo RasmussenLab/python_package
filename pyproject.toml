@@ -21,8 +21,6 @@ classifiers = [
 "Bug Tracker" = "https://github.com/RasmussenLab/python_package/issues"
 "Homepage" = "https://github.com/RasmussenLab/python_package"
 
-[tool.setuptools.dynamic]
-version = {attr = "mockup.__version__"}
 
 [project.optional-dependencies]
 docs = [
@@ -36,3 +34,11 @@ docs = [
 # Configure the Ruff linter: Ignore error number 501
 [tool.ruff]
 ignore = ["E501"]
+
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+
+[tool.setuptools_scm]
+# https://setuptools-scm.readthedocs.io/ 
+# used to pick up the version from the git tags or the latest commit.
