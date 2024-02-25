@@ -1,7 +1,10 @@
 # The __init__.py file is loaded when the package is loaded.
 # It is used to indicate that the directory in which it resides is a Python package
 
-__version__ = (0, 1, 0)
+# ! does not work yet:
+# from importlib import metadata
+# __version__ = metadata.version("mockup")
+__version__ = "24.02"
 
 from .mockup import add_one, Circle
 
