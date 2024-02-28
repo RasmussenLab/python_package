@@ -94,6 +94,29 @@ tests\test_circle.py:
   3  
 ```
 
+And additionally the author names:
+
+```bash
+pyproject.toml:
+  1  [project]
+  2: authors = [
+  3    {name = "Jakob Nybo Nissen", email = "jakobnybonissen@gmail.com"},
+
+README.md:
+  37     20  copyright = "2024, Jakob Nybo Nissen, Henry Webel"
+  38:    21  author = "Jakob Nybo Nissen, Henry Webel"
+  39     22: PACKAGE_VERSION = metadata.version("rasmussenlab-mockup")
+
+  96  
+  97: And additionally the author names:
+  98  
+
+docs\conf.py:
+  20  copyright = "2024, Jakob Nybo Nissen, Henry Webel"
+  21: author = "Jakob Nybo Nissen, Henry Webel"
+  22  PACKAGE_VERSION = metadata.version("rasmussenlab-mockup")
+```
+
 > Potentially a cookiecutter could be based on this template repository.
 
 ## Development environment

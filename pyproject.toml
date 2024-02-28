@@ -1,6 +1,7 @@
 [project]
 authors = [
   {name = "Jakob Nybo Nissen", email = "jakobnybonissen@gmail.com"},
+  {name = "Henry Webel", email = "henry.webel@sund.ku.dk"},
 ]
 description = "A small example package"
 name = "rasmussenlab-mockup"
@@ -20,7 +21,6 @@ classifiers = [
 [project.urls]
 "Bug Tracker" = "https://github.com/RasmussenLab/python_package/issues"
 "Homepage" = "https://github.com/RasmussenLab/python_package"
-
 
 [project.optional-dependencies]
 docs = [
