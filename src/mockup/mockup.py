@@ -92,3 +92,6 @@ class Circle:
     @classmethod
     def from_circumference(cls, circumference: Union[int, float]) -> Self:
         return cls(circumference / (2 * cls.PI))
+
+    def __repr__(self):
+        return f"Circle({self.radius})"

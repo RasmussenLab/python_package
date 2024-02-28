@@ -1,7 +1,9 @@
 # The __init__.py file is loaded when the package is loaded.
 # It is used to indicate that the directory in which it resides is a Python package
 
-__version__ = (0, 1, 0)
+
+from importlib import metadata
+__version__ = metadata.version("rasmussenlab-mockup")
 
 from .mockup import add_one, Circle
 
