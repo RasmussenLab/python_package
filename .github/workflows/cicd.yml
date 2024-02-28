@@ -15,6 +15,11 @@ permissions:
 
 
 jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: psf/black@stable 
   lint:
     name: Lint with ruff
     runs-on: ubuntu-latest
@@ -73,7 +78,7 @@ jobs:
         - uses: actions/upload-artifact@v4
           with:
             path: ./dist/*.tar.gz
-
+  # Needed in case of building packages with external binaries (e.g. Cython, RUst-extensions, etc.)
   # build_wheels:
   #   name: Build wheels on ${{ matrix.os }}
   #   if: startsWith(github.ref, 'refs/heads/main') || startsWith(github.ref, 'refs/tags')
@@ -103,7 +108,7 @@ jobs:
       name: Publish package
       if: startsWith(github.ref, 'refs/tags')
       needs:
-          # - format
+          - format
           - lint
           - test
           - build_source_dist
