@@ -3,6 +3,7 @@
 
 
 from importlib import metadata
+
 __version__ = metadata.version("rasmussenlab-mockup")
 
 from .mockup import add_one, Circle
