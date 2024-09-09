@@ -29,6 +29,7 @@ docs = [
   "myst-nb",
   "ipywidgets",
   "sphinx-new-tab-link!=0.2.2",
+  "jupytext",
 ]
 
 # Configure the Ruff linter: Ignore error number 501
