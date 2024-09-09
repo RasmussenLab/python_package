@@ -57,9 +57,7 @@ nb_execution_raise_on_error = True
 nb_merge_streams = True
 
 # https://myst-nb.readthedocs.io/en/latest/authoring/custom-formats.html#write-custom-formats
-nb_custom_formats = {
-    ".py": ["jupytext.reads", {"fmt": "py:percent"}]
-}
+nb_custom_formats = {".py": ["jupytext.reads", {"fmt": "py:percent"}]}
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
@@ -67,8 +65,13 @@ templates_path = ["_templates"]
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ["_build", "Thumbs.db",
-                    ".DS_Store", "jupyter_execute", "conf.py",]
+exclude_patterns = [
+    "_build",
+    "Thumbs.db",
+    ".DS_Store",
+    "jupyter_execute",
+    "conf.py",
+]
 
 
 # Intersphinx options
