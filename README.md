@@ -5,7 +5,14 @@
 Can be used as GitHub template repository,
 see [GitHub documentation](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
 
-You will need to find and replace occurences of `mockup` with the name of your package. This still might
+You will need to find and replace occurences of 
+
+- `mockup` -> `your_package_name`
+- `rasmussenlab-mockup` -> `your_package_name`
+- `RasmussenLab` -> `GitHub_user_name` (or organization)
+- `python_package` -> `your_package_name`
+
+with the name of your package and GitHub user name (or organization). This still might
 need further testing:
 
 ```bash

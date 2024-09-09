@@ -12,7 +12,7 @@ Install the docs dependencies of the package (as speciefied in toml):
 
 ```bash
 # in main folder
-pip install .[docs]
+pip install ".[docs]"
 ```
 
 ## Build docs using Sphinx command line tools

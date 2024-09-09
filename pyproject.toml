@@ -17,6 +17,8 @@ classifiers = [
   "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
 ]
+# # add dependencies here:
+# dependencies = ["numpy", "pandas", "scipy", "matplotlib", "seaborn"]
 
 [project.urls]
 "Bug Tracker" = "https://github.com/RasmussenLab/python_package/issues"
