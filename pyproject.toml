@@ -1,7 +1,7 @@
 [project]
 authors = [
-  {name = "Jakob Nybo Nissen", email = "jakobnybonissen@gmail.com"},
-  {name = "Henry Webel", email = "henry.webel@sund.ku.dk"},
+  { name = "Jakob Nybo Nissen", email = "jakobnybonissen@gmail.com" },
+  { name = "Henry Webel", email = "henry.webel@sund.ku.dk" },
 ]
 description = "A small example package"
 name = "rasmussenlab-mockup"
@@ -29,11 +29,13 @@ docs = [
   "myst-nb",
   "ipywidgets",
   "sphinx-new-tab-link!=0.2.2",
+  "jupytext",
 ]
+dev = ["black", "ruff", "pytest"]
 
 # Configure the Ruff linter: Ignore error number 501
 [tool.ruff]
-ignore = ["E501"]
+lint.ignore = ["E501"]
 
 [build-system]
 build-backend = "setuptools.build_meta"

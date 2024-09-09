@@ -124,7 +124,7 @@ docs\conf.py:
 Install package so that new code is picked up in a restared python interpreter:
 
 ```
-pip install -e .
+pip install -e ".[dev]"
 ```
 
 ## TestPyPI
