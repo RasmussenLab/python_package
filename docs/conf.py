@@ -13,7 +13,6 @@
 import os
 from importlib import metadata
 
-
 # -- Project information -----------------------------------------------------
 
 project = "mockup"
@@ -57,7 +56,10 @@ nb_execution_raise_on_error = True
 nb_merge_streams = True
 
 # https://myst-nb.readthedocs.io/en/latest/authoring/custom-formats.html#write-custom-formats
-nb_custom_formats = {".py": ["jupytext.reads", {"fmt": "py:percent"}]}
+# ! if you use it, then you cannot directly execute the notebook in the browser in colab
+# (the file needs to be fetched from the repository)
+# just keep both syncing it using papermill
+# nb_custom_formats = {".py": ["jupytext.reads", {"fmt": "py:percent"}]}
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
