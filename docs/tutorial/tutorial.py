@@ -1,21 +1,21 @@
 # %% [markdown]
-# # Mockup tutorial
-
-# %%
-from mockup import mockup
-
-# %%
-mockup.add_one(-11)
-
-# %%
-list(mockup.flatten_ints([[9, 11], [12], [4, 5]]))
-
-# %%
-c2 = mockup.Circle.from_circumference(100)
-round(c2.radius, 3)
-
-# %%
-c2  # repr
-
-# %% [markdown]
+# # Python Package tutorial
 #
+# Run when documentation is build. Building documentation therefore can become
+# an minimal integration test for the package.
+
+# %%
+from python_package import hello_world
+
+# %%
+ret = hello_world(2)
+ret
+
+# %%
+print(ret)
+
+# %%
+# hello_world?
+
+# %%
+# Simple example for a recipe showing what the package can do.

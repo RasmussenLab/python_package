@@ -5,7 +5,7 @@ authors = [
   { name = "Henry Webel", email = "henry.webel@sund.ku.dk" },
 ]
 description = "A small example package"
-name = "rasmussenlab-mockup"
+name = "python_package"
 # This means: Load the version from the package itself.
 # See the section below: [tools.setuptools.dynamic]
 dynamic = ["version"]
@@ -31,6 +31,8 @@ classifiers = [
 "Homepage" = "https://github.com/RasmussenLab/python_package"
 
 [project.optional-dependencies]
+# Optional dependencies to locally build the documentation, also used for 
+# readthedocs.
 docs = [
   "sphinx",
   "sphinx-book-theme",
@@ -39,6 +41,7 @@ docs = [
   "sphinx-new-tab-link!=0.2.2",
   "jupytext",
 ]
+# local development options
 dev = ["black", "ruff", "pytest"]
 
 # Configure the Ruff linter: Ignore error number 501
@@ -52,3 +55,6 @@ requires = ["setuptools>=64", "setuptools_scm>=8"]
 [tool.setuptools_scm]
 # https://setuptools-scm.readthedocs.io/ 
 # used to pick up the version from the git tags or the latest commit.
+
+[tool.isort]
+profile = "black"
