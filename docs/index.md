@@ -6,7 +6,7 @@
 :relative-images:
 ```
 
-## Tutorial
+<!-- hidden toc trees for sidebar -->
 
 ```{toctree}
 :maxdepth: 2
@@ -16,8 +16,6 @@
 tutorial/tutorial
 ```
 
-## Contents
-
 ```{toctree}
 :maxdepth: 2
 :caption: "Reference"
@@ -25,8 +23,6 @@ tutorial/tutorial
 
 reference/python_package
 ```
-
-## Technical notes
 
 ```{toctree}
 :maxdepth: 2
