@@ -23,10 +23,12 @@ ret
 print(ret)
 
 # %% [markdown]
-# Inspect the signature.
+# Inspect the signature. In an interactive session you could also use `hello_world?` to
+# display the docstring. See the rendered version
+# [of `hello_world` under the Reference]](python_package.mockup.hello_world)
 
 # %%
-# hello_world?
+help(hello_world)
 
 # %% [markdown]
 # Simple example for a recipe showing what the package can do.
