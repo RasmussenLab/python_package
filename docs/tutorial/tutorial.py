@@ -25,7 +25,7 @@ print(ret)
 # %% [markdown]
 # Inspect the signature. In an interactive session you could also use `hello_world?` to
 # display the docstring. See the rendered version
-# [of `hello_world` under the Reference]](python_package.mockup.hello_world)
+# [of `hello_world` under the Reference](python_package.mockup.hello_world)
 
 # %%
 help(hello_world)
