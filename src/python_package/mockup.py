@@ -6,7 +6,7 @@ def hello_world(n: int) -> str:
 
     Parameters
     ----------
-    number : int
+    n : int
         How many time to return hello world
 
     Returns

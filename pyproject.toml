@@ -10,8 +10,7 @@ name = "python_package"
 # See the section below: [tools.setuptools.dynamic]
 dynamic = ["version"]
 readme = "README.md"
-# We use features for Python 3.11, so we test it here.
-requires-python = ">=3.11"
+requires-python = ">=3.9"
 # These are keywords
 classifiers = [
   "Programming Language :: Python :: 3",
