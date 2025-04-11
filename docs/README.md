@@ -25,7 +25,7 @@ Options:
 ```bash	
 # pwd: docs
 # apidoc
-sphinx-apidoc --force --implicit-namespaces --module-first -o reference ../src/mockup
+sphinx-apidoc --force --implicit-namespaces --module-first -o reference ../src/python_package
 # build docs
 sphinx-build -n -W --keep-going -b html ./ ./_build/
 ```
