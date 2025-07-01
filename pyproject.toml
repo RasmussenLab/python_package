@@ -1,26 +1,28 @@
 # ref: https://setuptools.pypa.io/en/stable/userguide/pyproject_config.html
 [project]
 authors = [
-  { name = "Jakob Nybo Nissen", email = "jakobnybonissen@gmail.com" },
-  { name = "Henry Webel", email = "henry.webel@sund.ku.dk" },
+  { name = "First Last", email = "first.last@gmail.com" },
 ]
 description = "A small example package"
 name = "python_package"
 # This means: Load the version from the package itself.
 # See the section below: [tools.setuptools.dynamic]
-dynamic = ["version"]
+dynamic = ["version", # version is loaded from the package
+#"dependencies", # add if using requirements.txt
+]
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.9" # test all higher Python versions
 # These are keywords
 classifiers = [
   "Programming Language :: Python :: 3",
-  "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
 ]
+license = "MIT" # https://choosealicense.com/
 # # add dependencies here: (use one of the two)
 # dependencies = ["numpy", "pandas", "scipy", "matplotlib", "seaborn"]
 # use requirements.txt instead of pyproject.toml for dependencies
 # https://stackoverflow.com/a/73600610/9684872
+# ! uncomment also dependencies in the dynamic section above
 # [tool.setuptools.dynamic]
 # dependencies = {file = ["requirements.txt"]}
 
@@ -39,13 +41,23 @@ docs = [
   "ipywidgets",
   "sphinx-new-tab-link!=0.2.2",
   "jupytext",
+  "sphinx-copybutton",
 ]
 # local development options
-dev = ["black", "ruff", "pytest"]
+dev = ["black[jupyter]", "ruff", "pytest"]
 
 # Configure the Ruff linter: Ignore error number 501
 [tool.ruff]
-lint.ignore = ["E501"]
+# https://docs.astral.sh/ruff/rules/#flake8-bandit-s
+# lint.ignore = ["E501"] # Ignore line length errors
+# Allow lines to be as long as (default is 88 in black)
+
+[tool.ruff.lint]
+# https://docs.astral.sh/ruff/tutorial/#rule-selection
+# 1. Enable flake8-bugbear (`B`) rules
+# 2. Enable pycodestyle (`E`) errors and (`W`) warnings
+# 3. Pyflakes (`F`) errors
+extend-select = ["E", "W", "F", "B"]
 
 [build-system]
 build-backend = "setuptools.build_meta"
